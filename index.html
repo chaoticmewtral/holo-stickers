@@ -16,7 +16,7 @@
         <p>If you're outside the United States, you'll get a message from me within 1 business day with the shipping cost to your address.</p>
         <p>If you have any issues, please reach out to me at <a href="mailto:orders@chaoticmewtral.com">orders@chaoticmewtral.com</a>!</p>
     </div>
-    <form method="post" name="holo-order" data-netlify="true">
+    <form method="post" name="holo-order" data-netlify="true" action="./pages/confirm.html">
         <label for="name">Name</label>
         <input type="text" name="name" id="name" required>
 
@@ -33,8 +33,16 @@
         <label for="pickup">Local Pickup</label>
         <input type="radio" name="receive" id="pickup">
 
-        <label for="address">Address</label>
-        <textarea name="address" id="address" cols="30" rows="10" required></textarea>
+        <div id="addy">
+            <label for="address">Address</label>
+            <textarea name="address" id="address" cols="30" rows="10" required></textarea>
+        </div>
+        <div id="floating-total">
+            <p>Quantity: <span id="qty"></span></p>
+        </div>
+        <div id="total">
+            <p>Subtotal: $<span id="subtotal">0</span></p>
+        </div>
 
         <button type="submit">Submit</button>
     </form>
