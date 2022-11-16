@@ -1,4 +1,17 @@
 body {
     background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); 
+    background: repeat center/60% url("./images/pride-dice.png"), radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); 
+}
+
+#intro {
+    background-color: rgba(255, 255, 255, .8);
+    margin: 2em auto;
+    display: grid;
+    justify-content: center;
+}
+
+form {
+    background-color: rgba(255, 255, 255, .8);
+    margin: 2em auto;
+    display: grid;
 }
