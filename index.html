@@ -19,19 +19,22 @@
     <form method="post" name="holo-order" data-netlify="true">
         <label for="name">Name</label>
         <input type="text" name="name" id="name" required>
+
         <label for="email">Email</label>
         <input type="email" name="email" id="email" required>
+        
         <label for="quantity">How many stickers would you like? ($1 each)</label>
         <input type="number" name="quantity" id="quantity">
-        <label for="payment-method">How would you like to pay?</label>
-        <select name="payment-method" id="payment-method">
-            <option value="cash-app">Cash App</option>
-            <option value="venmo">Venmo</option>
-            <option value="paypal">PayPal</option>
-        </select>
+
+        <legend>How would you like to receive your stickers?</legend>
+        <label for="delivery">Delivery</label>
+        <input type="radio" name="receive" id="delivery">
+
+        <label for="pickup">Local Pickup</label>
+        <input type="radio" name="receive" id="pickup">
+
         <label for="address">Address</label>
         <textarea name="address" id="address" cols="30" rows="10" required></textarea>
-
 
         <button type="submit">Submit</button>
     </form>
