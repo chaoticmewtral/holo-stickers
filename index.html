@@ -20,7 +20,15 @@
         <label for="email">Email</label>
         <input type="email" name="email" id="email" required>
         <label for="address">Address</label>
-        <textarea name="address" id="address" cols="30" rows="10"></textarea>
+        <textarea name="address" id="address" cols="30" rows="10" required></textarea>
+        <label for="quantity">How many stickers would you like? ($1 each)</label>
+        <input type="number" name="quantity" id="quantity">
+        <label for="payment-method">How would you like to pay?</label>
+        <select name="payment-method" id="payment-method">
+            <option value="cash-app">Cash App</option>
+            <option value="venmo">Venmo</option>
+            <option value="paypal">PayPal</option>
+        </select>
         <button type="submit">Submit</button>
     </form>
 </body>
