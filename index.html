@@ -14,8 +14,14 @@
     <p>In the interests of keeping the cost as low as possible while covering my expenses, at the end of the form will be your total, order ID, and next steps to pay.</p>
     <p>If you're outside the United States, you'll get a message from me within 1 business day with the shipping cost to your address.</p>
     <p>If you have any issues, please reach out to me at <a href="mailto:orders@chaoticmewtral.com">orders@chaoticmewtral.com</a>!</p>
-    <form>
-        
+    <form method="post" name="holo-order" data-netlify="true">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <label for="address">Address</label>
+        <textarea name="address" id="address" cols="30" rows="10"></textarea>
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>
