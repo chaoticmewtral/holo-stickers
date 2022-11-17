@@ -30,18 +30,25 @@
         </div>
         
         <div class="form-field qty">
-            <label for="quantity">How many stickers would you like? ($1 each)</label>
-            <input type="number" name="quantity" id="quantity">
+            <label for="quantity">How many stickers would you like?</label>
+            <input type="number" name="quantity" id="quantity" max="20" min="0">
         </div>
 
-        <div class="form-field receive" id="receive">
-            <legend>How would you like to receive your stickers?</legend>
+        <legend class="receive" id="receive">
+            <p>
+                How would you like to receive your stickers?
+            </p>
             
-            <input type="radio" name="receive" id="delivery">
-            <label for="delivery">Delivery</label>
+            <div class="delivery">
+                <input type="radio" name="receive" id="delivery">
+                <label for="delivery">Delivery</label>
+            </div>
             
-            <input type="radio" name="receive" id="pickup">
-            <label for="pickup">Local Pickup</label>
+            <div class="pickup">
+                <input type="radio" name="receive" id="pickup">
+                <label for="pickup">Local Pickup</label>
+            </div>
+        </legend>
         </div>
 
         <div id="addy" class="form-field address">

@@ -24,7 +24,8 @@ form {
     padding: 15px;
     gap: 10px;
     grid-template-areas:
-    'name email'
+    'name sticker'
+    'email sticker'
     'qty sticker'
     'receive sticker'
     'address sticker';
@@ -41,6 +42,7 @@ form {
 
 .qty {
     grid-area: qty;
+    grid-template-columns: auto auto;
 }
 
 .sticker {
@@ -60,36 +62,33 @@ form {
     left: 50%;
 }
 
-#qty-label {
-
-    justify-self: center;
-}
-
-#qty {
-
-}
-
 .address {
     grid-area: address;
 }
 
-.receive {
+#receive {
     grid-area: receive;
+    display: grid;
+    align-items: center;
+    grid-template-areas: 
+        'p delivery'
+        'p pickup';
+}
+
+#receive.delivery {
+    grid-area: delivery;
+}
+
+#receive p {
+    grid-area: p;
+}
+
+#receive.pickup {
+    grid-area: pickup;
 }
 
 .form-field {
     display: grid;
-}
-
-#receive {
-    grid-template-areas:
-    'legend legend'
-    'input label'
-    'input label';
-}
-
-legend {
-    grid-area: legend;
 }
 
 #addy {
