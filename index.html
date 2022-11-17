@@ -19,27 +19,37 @@
         <p>If you have any issues, please reach out to me at <a href="mailto:orders@chaoticmewtral.com">orders@chaoticmewtral.com</a>!</p>
     </div>
     <form method="post" name="holo-order" data-netlify="true" action="./pages/confirm.html">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" required>
+        <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
+        </div>
 
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required>
+        <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+        </div>
         
-        <label for="quantity">How many stickers would you like? ($1 each)</label>
-        <input type="number" name="quantity" id="quantity">
+        <div class="form-field">
+            <label for="quantity">How many stickers would you like? ($1 each)</label>
+            <input type="number" name="quantity" id="quantity">
+        </div>
 
-        <legend>How would you like to receive your stickers?</legend>
-        <label for="delivery">Delivery</label>
-        <input type="radio" name="receive" id="delivery">
+        <div class="form-field">
+            <legend>How would you like to receive your stickers?</legend>
+            <label for="delivery">Delivery</label>
+            <input type="radio" name="receive" id="delivery">
+            <label for="pickup">Local Pickup</label>
+            <input type="radio" name="receive" id="pickup">
+        </div>
 
-        <label for="pickup">Local Pickup</label>
-        <input type="radio" name="receive" id="pickup">
-
-        <div id="addy">
+        <div id="addy" class="form-field">
             <label for="address">Address</label>
             <textarea name="address" id="address" cols="30" rows="10" required></textarea>
         </div>
         <div id="floating-total">
+            <svg width="241" height="277" viewBox="0 0 241 277" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M120.5 0L240.445 69.25V207.75L120.5 277L0.555481 207.75V69.25L120.5 0Z"/>
+                </svg>
             <p>Quantity: <span id="qty"></span></p>
         </div>
         <div id="total">

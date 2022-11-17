@@ -11,14 +11,27 @@ body {
     margin: 2em auto;
     display: grid;
     justify-content: center;
+    max-width: 600px;
+    padding: 10px;
 }
 
 form {
     background-color: rgba(255, 255, 255, .8);
     margin: 2em auto;
     display: grid;
+    max-width: 600px;
+    padding: 15px;
+    gap: 10px;
+}
+
+.form-field {
+    display: grid;
 }
 
 #addy {
     display: none;
+}
+
+svg {
+    color: rgba(141, 162, 162, 0.615);
 }
