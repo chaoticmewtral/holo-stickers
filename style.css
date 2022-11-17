@@ -1,5 +1,6 @@
 * {
     font-family: Ubuntu, sans-serif;
+    box-sizing: border-box;
 }
 body {
     background: rgb(238,174,202);
@@ -7,7 +8,7 @@ body {
 }
 
 #intro {
-    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(255, 255, 255, .95);
     margin: 2em auto;
     display: grid;
     justify-content: center;
@@ -16,22 +17,86 @@ body {
 }
 
 form {
-    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(255, 255, 255, .95);
     margin: 2em auto;
     display: grid;
     max-width: 600px;
     padding: 15px;
     gap: 10px;
+    grid-template-areas:
+    'name email'
+    'qty sticker'
+    'receive sticker'
+    'address sticker';
+    position: relative;
+}
+
+.name {
+    grid-area: name;
+}
+
+.email {
+    grid-area: email;
+}
+
+.qty {
+    grid-area: qty;
+}
+
+.sticker {
+    grid-area: sticker;
+    display: grid;
+    position: relative;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.sticker p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    left: 50%;
+}
+
+#qty-label {
+
+    justify-self: center;
+}
+
+#qty {
+
+}
+
+.address {
+    grid-area: address;
+}
+
+.receive {
+    grid-area: receive;
 }
 
 .form-field {
     display: grid;
 }
 
+#receive {
+    grid-template-areas:
+    'legend legend'
+    'input label'
+    'input label';
+}
+
+legend {
+    grid-area: legend;
+}
+
 #addy {
     display: none;
 }
 
-svg {
-    color: rgba(141, 162, 162, 0.615);
+img {
+    width: 100%;
+    height: auto;
 }

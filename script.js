@@ -9,9 +9,8 @@ local.addEventListener('input', addAddressField);
 
 
 function updatePrice() {
-    const qty = document.querySelector('#qty');
+
     const subtotal = document.querySelector('#subtotal');
-    qty.textContent = quantity.value;
     subtotal.textContent = quantity.value;
 }
 
